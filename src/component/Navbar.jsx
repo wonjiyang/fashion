@@ -32,6 +32,14 @@ function Navbar() {
     setIsSearchOpen(!isSearchOpen);
   };
 
+  const search = (event) => {
+    if (event.key === 'Enter') {
+      let keyword = event.target.value;
+      navigate(`/?q=${keyword}`);
+      setIsSearchOpen(false); // Enter를 눌렀을 때 overlay 닫기
+    }
+  };
+
   return (
     <div className="navbar">
       <div className="logo">
@@ -56,7 +64,7 @@ function Navbar() {
 
         {isSearchOpen && (
           <>
-            <div className="overlay" onClick={toggleSearch}></div>{' '}
+            <div className="overlay" onClick={toggleSearch}></div>
             <div className="search-open">
               <div className="input-search">
                 <div className="search-area">
@@ -68,6 +76,7 @@ function Navbar() {
                     className={`search-input ${isSearchOpen ? 'slide-in' : ''}`}
                     placeholder="Search..."
                     autoFocus
+                    onKeyPress={search}
                   />
                 </div>
                 <button className="icon" onClick={toggleSearch}>
