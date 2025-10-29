@@ -12,7 +12,7 @@
     },
     {
       "id": 1,
-      "img": "/public/2.avif",
+      "img": "https://image.hm.com/assets/hm/1c/c1/1cc19a325e0ee0c9aa9366c4705d5a62632ed367.jpg?imwidth=2160",
       "hoverImg": "/public/hover-2.avif",
       "title": "숄더 패드 리브니트 드레스",
       "price": 59900,
