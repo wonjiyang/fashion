@@ -27,7 +27,7 @@ function ProductCard({ item }) {
         </div>
         <div>{item?.title}</div>
         <div className="price">₩{item?.price}</div>
-        <div>{item?.new === true ? '신제품' : ''}</div>
+        <div className="new">{item?.new === true ? '신제품' : ''}</div>
       </div>
     </div>
   );

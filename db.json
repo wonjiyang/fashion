@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 0,
-      "img": "/public/1.avif",
+      "img": "https://noona-hnm.netlify.app/pattern-jacket.jpeg",
       "hoverImg": "/public/hover-1.avif",
       "title": "스카프 칼라 리브니트 스웨터",
       "price": 59900,
