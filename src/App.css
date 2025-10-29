@@ -4,6 +4,10 @@ body {
   height: 100%;
 }
 
+#root {
+  width: 100%;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -127,6 +131,10 @@ body {
 
 .icon-bag {
   font-size: 15px;
+}
+
+.icon-login {
+  cursor: pointer;
 }
 
 .img {

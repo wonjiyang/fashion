@@ -6,10 +6,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const menuList = ['WOMEN', 'MEN', 'KIDS', 'HOME', 'SALE'];
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate('/login');
+  };
 
   useEffect(() => {
     if (isSearchOpen) {
@@ -73,7 +78,7 @@ function Navbar() {
           </>
         )}
 
-        <button>
+        <button className="icon-login" onClick={goToLogin}>
           <FontAwesomeIcon icon={faUser} className="icon" />
         </button>
         <button>
