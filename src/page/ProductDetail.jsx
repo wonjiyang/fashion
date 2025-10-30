@@ -22,7 +22,12 @@ function ProductDetail() {
       <div className="detail-content">
         <div className="detail-title">{product?.title}</div>
         <div className="detail-price">₩ {product?.price}</div>
-        <div className="detail-color">컬러: {product?.color}</div>
+        <div className="detail-color">컬러: {product?.color}</div>{' '}
+        <img
+          alt="detail"
+          className="detail-color-img"
+          src={product?.hoverImg}
+        />
         <Button className="detail-similar">비슷한 아이템 보기</Button>
         <div className="detail-size">
           <button className="size">{product?.size[0]}</button>

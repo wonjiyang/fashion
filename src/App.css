@@ -303,13 +303,20 @@ body {
 }
 
 .detail-color {
-  margin-bottom: 80px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.detail-color-img {
+  width: 100px;
+  margin-bottom: 40px;
+  border: 1px solid #343a40 !important;
 }
 
 .detail-similar {
   width: 100%;
   text-align: end !important;
-  font-size: 14px !important;
+  font-size: 13px !important;
   background-color: white !important;
   border-color: white !important;
   color: #7e7e7e !important;
@@ -321,13 +328,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .size {
   width: 70px;
   height: 55px;
   padding: 3px;
-  border: 0.5px solid #6b6b6b;
+  border: 0.5px solid #d4d4d4;
 }
 
 .size:hover {
