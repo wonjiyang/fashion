@@ -15,7 +15,7 @@ function ProductAll() {
 
     try {
       const searchQuery = query.get('q') || '';
-      const url = `http://localhost:5000/products?q=${searchQuery}`;
+      const url = `https://my-json-server.typicode.com/wonjiyang/fashion/products?q=${searchQuery}`;
       const response = await fetch(url);
 
       if (!response.ok) {
