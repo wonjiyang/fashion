@@ -6,7 +6,7 @@ function ProductDetail() {
   let { id } = useParams();
   const [product, setProduct] = useState(null);
   const getProductDetail = async () => {
-    let url = `http://localhost:5000/products?q=${searchQuery}`;
+    let url = `http://localhost:5000/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     setProduct(data);
@@ -17,7 +17,7 @@ function ProductDetail() {
   return (
     <div className="detail-sec">
       <div className="detail-img-sec">
-        <img className="detail-img" src={product?.img} />
+        <img alt="detail" className="detail-img" src={product?.img} />
       </div>
       <div className="detail-content">
         <div className="detail-title">{product?.title}</div>
