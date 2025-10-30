@@ -30,13 +30,16 @@ function ProductDetail() {
         />
         <Button className="detail-similar">비슷한 아이템 보기</Button>
         <div className="detail-size">
-          <button className="size">{product?.size[0]}</button>
-          <button className="size">{product?.size[1]}</button>
-          <button className="size">{product?.size[2]}</button>
-          <button className="size">{product?.size[3]}</button>
-          <button className="size">{product?.size[4]}</button>
-          <button className="size">{product?.size[5]}</button>
-          <button className="size size-last">{product?.size[6]}</button>
+          {product?.size?.map((s, index) => (
+            <button
+              key={index}
+              className={`size ${
+                index === product.size.length - 1 ? 'size-last' : ''
+              }`}
+            >
+              {s}
+            </button>
+          ))}
         </div>
         <Button className="detail-similar">사이즈 가이드</Button>
         <Button className="detail-btn" variant="dark" type="submit">
