@@ -8,7 +8,8 @@
       "price": 59900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "다크 브라운",
+      "size": ["XXS", "XS", "S", "M", "L", "XL", "XXL"]
     },
     {
       "id": 1,
@@ -18,7 +19,8 @@
       "price": 59900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "버건디",
+      "size": ["XXS", "XS", "S", "M", "L", "XL", "XXL"]
     },
     {
       "id": 2,
@@ -28,7 +30,8 @@
       "price": 99000,
       "choice": true,
       "new": true,
-      "size": ["S", "M", "L"]
+      "color": "크림, 다크 그레이",
+      "size": ["XS", "S", "M", "L", "XL"]
     },
     {
       "id": 3,
@@ -38,7 +41,8 @@
       "price": 79900,
       "choice": false,
       "new": true,
-      "size": ["S", "M", "L"]
+      "color": "다크 브라운",
+      "size": ["XS", "S", "M", "L", "XXL"]
     },
     {
       "id": 4,
@@ -48,7 +52,8 @@
       "price": 99900,
       "choice": true,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "베이지",
+      "size": ["XXS", "XS", "S", "M", "L", "XL", "XXL"]
     },
     {
       "id": 5,
@@ -58,7 +63,8 @@
       "price": 49900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "데님 블루, 다크 데님 블루, 라이트 데님 블루",
+      "size": ["32", "34", "38", "40", "42", "44", "46"]
     },
     {
       "id": 6,
@@ -68,7 +74,8 @@
       "price": 99900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "다크 데님 블루",
+      "size": ["XXS", "XS", "S", "M", "L", "XL"]
     },
     {
       "id": 7,
@@ -78,6 +85,7 @@
       "price": 99900,
       "choice": false,
       "new": true,
+      "color": "다크 브라운",
       "size": ["S", "M", "L"]
     },
     {
@@ -98,7 +106,8 @@
       "price": 34900,
       "choice": false,
       "new": true,
-      "size": ["S", "M", "L"]
+      "color": "라이트 핑크, 베이지, 다크 브라운",
+      "size": ["XS", "S", "M", "L", "XL"]
     },
     {
       "id": 10,
@@ -108,7 +117,8 @@
       "price": 29900,
       "choice": true,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "핑크",
+      "size": ["32", "34", "38", "40", "42", "44"]
     },
     {
       "id": 11,
@@ -118,7 +128,8 @@
       "price": 49900,
       "choice": true,
       "new": true,
-      "size": ["S", "M", "L"]
+      "color": "다크 브라운",
+      "size": ["XS", "S", "M", "L", "XL"]
     },
     {
       "id": 12,
@@ -128,7 +139,8 @@
       "price": 69900,
       "choice": true,
       "new": true,
-      "size": ["S", "M", "L"]
+      "color": "베이지",
+      "size": ["XS", "S", "M", "L", "XL"]
     },
     {
       "id": 13,
@@ -138,7 +150,8 @@
       "price": 39900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "화이트",
+      "size": ["XXS", "XS", "S", "M", "L", "XL"]
     },
     {
       "id": 14,
@@ -148,7 +161,8 @@
       "price": 34900,
       "choice": false,
       "new": true,
-      "size": ["S", "M", "L"]
+      "color": "라이트 핑크, 화이트",
+      "size": ["XS", "S", "M", "L"]
     },
     {
       "id": 15,
@@ -158,7 +172,8 @@
       "price": 29900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "화이트, 블랙",
+      "size": ["XXS", "XS", "S", "M", "L", "XL"]
     },
     {
       "id": 16,
@@ -168,17 +183,19 @@
       "price": 59900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "Brown",
+      "size": []
     },
     {
       "id": 17,
       "img": "https://image.hm.com/assets/hm/57/d3/57d35688f58fc84e4fbab606184867b16cf7145c.jpg?imwidth=820",
       "hoverImg": "https://image.hm.com/assets/hm/dc/ee/dceee72a9f7796a20542cfceae5bd1124cfd4d54.jpg?imwidth=820",
-      "title": "화이웨스트 플레어 진",
+      "title": "하이웨스트 플레어 진",
       "price": 49900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "데님 블루",
+      "size": ["32", "34", "38", "40", "42", "44", "46"]
     },
     {
       "id": 18,
@@ -188,7 +205,8 @@
       "price": 39900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "다크 브라운, 다크 그레이",
+      "size": ["XXS", "XS", "S", "M", "L", "XL"]
     },
     {
       "id": 19,
@@ -198,7 +216,8 @@
       "price": 34900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "베이지, 다크 데님 블루",
+      "size": ["32", "34", "38", "40", "42", "44"]
     },
     {
       "id": 20,
@@ -208,7 +227,8 @@
       "price": 79900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "브라운",
+      "size": ["XS", "S", "M", "L", "XL"]
     },
     {
       "id": 21,
@@ -218,7 +238,8 @@
       "price": 59900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "라이트 데님 블루",
+      "size": ["32", "34", "38", "40", "42", "44", "46"]
     },
     {
       "id": 22,
@@ -228,7 +249,8 @@
       "price": 39900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "베이지",
+      "size": ["XXS", "XS", "S", "M", "L", "XL"]
     },
     {
       "id": 23,
@@ -238,7 +260,8 @@
       "price": 34900,
       "choice": false,
       "new": false,
-      "size": ["S", "M", "L"]
+      "color": "라이트 데님 블루, 라이트 카키 그린",
+      "size": ["32", "34", "38", "40", "42", "44"]
     }
   ]
 }

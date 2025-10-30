@@ -9,15 +9,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import PrivateRoute from './route/PrivateRoute';
 
 function App() {
-  const [authenticate, serAuthenticate] = useState(false);
+  const [authenticate, setAuthenticate] = useState(false);
+
   return (
     <div>
-      <Navbar />
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path="/" element={<ProductAll />} />
         <Route
           path="/login"
-          element={<Login serAuthenticate={serAuthenticate} />}
+          element={<Login setAuthenticate={setAuthenticate} />}
         />
         <Route
           path="/product/:id"

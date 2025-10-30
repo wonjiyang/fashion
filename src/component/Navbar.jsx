@@ -3,51 +3,69 @@ import {
   faSearch,
   faShoppingBag,
   faXmark,
+  faBars,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ authenticate, setAuthenticate }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuList = ['WOMEN', 'MEN', 'KIDS', 'HOME', 'SALE'];
   const navigate = useNavigate();
-  const goToLogin = () => {
-    navigate('/login');
+
+  const toggleLogin = () => {
+    if (authenticate) {
+      setAuthenticate(false);
+      navigate('/');
+    } else {
+      navigate('/login');
+    }
+  };
+
+  const goToHome = () => {
+    navigate('/');
   };
 
   useEffect(() => {
-    if (isSearchOpen) {
+    if (isSearchOpen || isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
-
     return () => {
       document.body.style.overflow = 'auto';
     };
-  }, [isSearchOpen]);
+  }, [isSearchOpen, isMenuOpen]);
 
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const search = (event) => {
     if (event.key === 'Enter') {
       let keyword = event.target.value;
       navigate(`/?q=${keyword}`);
-      setIsSearchOpen(false); // Enter를 눌렀을 때 overlay 닫기
+      setIsSearchOpen(false);
     }
   };
 
   return (
     <div className="navbar">
-      <div className="logo">
-        <img
-          width={50}
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1024px-H%26M-Logo.svg.png"
-          alt="logo"
-        />
+      <div className="sec-1">
+        <div className="logo" onClick={goToHome}>
+          <img
+            width={50}
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1024px-H%26M-Logo.svg.png"
+            alt="logo"
+          />
+        </div>
+
         <div className="menu-area">
           <ul className="menu-list">
             {menuList.map((menu) => (
@@ -55,6 +73,10 @@ function Navbar() {
             ))}
           </ul>
         </div>
+
+        <button className="menu-toggle" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={faBars} />
+        </button>
       </div>
 
       <div className="nav-sec">
@@ -87,7 +109,7 @@ function Navbar() {
           </>
         )}
 
-        <button className="icon-login" onClick={goToLogin}>
+        <button className="icon-login" onClick={toggleLogin}>
           <FontAwesomeIcon icon={faUser} className="icon" />
         </button>
         <button>
@@ -97,6 +119,22 @@ function Navbar() {
           <FontAwesomeIcon icon={faShoppingBag} className="icon" />
         </button>
       </div>
+
+      {isMenuOpen && (
+        <>
+          <div className="overlay" onClick={toggleMenu}></div>
+          <div className={`side-menu ${isMenuOpen ? 'slide-in' : ''}`}>
+            <button className="close-btn" onClick={toggleMenu}>
+              <FontAwesomeIcon icon={faXmark} />
+            </button>
+            <ul>
+              {menuList.map((menu) => (
+                <li key={menu}>{menu}</li>
+              ))}
+            </ul>
+          </div>
+        </>
+      )}
     </div>
   );
 }
