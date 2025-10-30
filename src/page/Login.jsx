@@ -5,15 +5,12 @@ import { useNavigate } from 'react-router-dom';
 function Login({ setAuthenticate }) {
   const navigate = useNavigate();
 
-  // ✅ 입력값 및 에러 상태 관리
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
 
   const validate = () => {
     const newErrors = {};
-
-    // 이메일 형식 검사 (간단한 정규식)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email) {
       newErrors.email = '이메일을 입력해주세요.';
@@ -21,7 +18,6 @@ function Login({ setAuthenticate }) {
       newErrors.email = '올바른 이메일 형식이 아닙니다.';
     }
 
-    // 비밀번호 검사 (6자 이상)
     if (!password) {
       newErrors.password = '비밀번호를 입력해주세요.';
     } else if (password.length < 6) {
@@ -35,9 +31,8 @@ function Login({ setAuthenticate }) {
   const loginUser = (event) => {
     event.preventDefault();
 
-    if (!validate()) return; // 유효성 검사 통과 못하면 중단
+    if (!validate()) return;
 
-    // 로그인 성공
     setAuthenticate(true);
     navigate('/');
   };

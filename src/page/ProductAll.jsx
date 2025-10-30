@@ -7,15 +7,15 @@ function ProductAll() {
   const [productList, setProductList] = useState([]);
   const [query, setQuery] = useSearchParams();
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null); // 에러 상태 추가
+  const [error, setError] = useState(null);
 
   const getProducts = async () => {
     setLoading(true);
-    setError(null); // 이전 에러 초기화
+    setError(null);
 
     try {
       const searchQuery = query.get('q') || '';
-      const url = `https://my-json-server.typicode.com/wonjiyang/fashion/products?q=${searchQuery}`;
+      const url = `http://localhost:5000/products?q=${searchQuery}`;
       const response = await fetch(url);
 
       if (!response.ok) {
@@ -24,7 +24,6 @@ function ProductAll() {
 
       const data = await response.json();
 
-      // 데이터가 비어있는 경우
       if (data.length === 0) {
         setError('검색 결과가 없습니다.');
       } else {
