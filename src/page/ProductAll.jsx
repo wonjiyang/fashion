@@ -12,25 +12,18 @@ function ProductAll() {
   const getProducts = async () => {
     setLoading(true);
     setError(null);
-
     try {
-      const searchQuery = query.get('q') || '';
-      const url = `https://my-json-server.typicode.com/wonjiyang/fashion/products?q=${searchQuery}`;
-      const response = await fetch(url);
-
-      if (!response.ok) {
-        throw new Error(`서버 오류: ${response.status}`);
-      }
-
+      const searchQuery = query.get('q')?.toLowerCase() || '';
+      const response = await fetch('/products.json');
+      if (!response.ok) throw new Error('상품 데이터를 불러올 수 없습니다.');
       const data = await response.json();
-
-      if (data.length === 0) {
-        setError('검색 결과가 없습니다.');
-      } else {
-        setProductList(data);
-      }
+      const filtered = data.products.filter((item) =>
+        item.title.toLowerCase().includes(searchQuery)
+      );
+      if (filtered.length === 0) setError('검색 결과가 없습니다.');
+      setProductList(filtered);
     } catch (err) {
-      console.error('상품 데이터를 불러오는 중 오류 발생:', err);
+      console.error(err);
       setError('상품 데이터를 불러오는 중 오류가 발생했습니다.');
     } finally {
       setLoading(false);
@@ -46,9 +39,7 @@ function ProductAll() {
       {loading ? (
         <p className="loading-text">로딩 중...</p>
       ) : error ? (
-        <div className="no-result">
-          <p>{error}</p>
-        </div>
+        <div className="no-result">{error}</div>
       ) : (
         <Row>
           {productList.map((menu) => (
